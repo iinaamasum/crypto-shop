@@ -32,10 +32,11 @@ const Header = () => {
           }`}
         >
           {navItems.map((item) => (
-            <li className="md:ml-8 my-7 md:my-0 text-gray-900 hover:text-gray-400 transition-all duration-200 uppercase font-semibold">
-              <Link to={item.path} key={item.id}>
-                {item.name}
-              </Link>
+            <li
+              className="md:ml-8 my-7 md:my-0 text-gray-900 hover:text-gray-400 transition-all duration-200 uppercase font-semibold"
+              key={item.id}
+            >
+              <Link to={item.path}>{item.name}</Link>
             </li>
           ))}
         </ul>

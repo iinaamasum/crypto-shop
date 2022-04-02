@@ -1,0 +1,14 @@
+.bg__img {
+  background-image: url('../../assets/bg2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0.7; */
+  height: 85vh;
+}
+
+.position__text {
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+}
