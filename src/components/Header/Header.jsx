@@ -12,10 +12,10 @@ const Header = () => {
     { id: 4, name: 'About', path: '/about' },
   ];
   return (
-    <div className="shadow-md w-full sticky top-0 left-0 bg-white">
+    <div className="shadow-md w-full sticky top-0 left-0 bg-gray-600">
       <div className="md:flex items-center justify-between py-4 container mx-auto">
         {/* logo */}
-        <div className="uppercase tracking-wide text-3xl sm:text-4xl cursor-pointer text-indigo-900 font-bold ml-8 sm:ml-0">
+        <div className="uppercase tracking-wide text-3xl sm:text-4xl cursor-pointer text-white font-bold ml-8 sm:ml-0">
           Crypto Shop
         </div>
         {/* FaHamburger */}
@@ -27,13 +27,13 @@ const Header = () => {
         </div>
         {/* links */}
         <ul
-          className={`text-xl md:flex md:items-center absolute md:static bg-white z-[-1] md:z-auto left-0 w-full md:w-auto pl-12 md:pl-0 transition-all duration-500 ease-in-out ${
+          className={`text-xl md:flex md:items-center absolute md:static bg-gray-600 z-[-1] md:z-auto left-0 w-full md:w-auto pl-12 md:pl-0 transition-all duration-500 ease-in-out ${
             open ? 'top-17 opacity-95' : 'top-[-900px] md:opacity-100 opacity-0'
           }`}
         >
           {navItems.map((item) => (
             <li
-              className="md:ml-8 my-7 md:my-0 text-gray-900 hover:text-gray-400 transition-all duration-200 uppercase font-semibold"
+              className="md:ml-8 my-7 md:my-0 text-white hover:text-gray-400 transition-all duration-200 uppercase font-semibold"
               key={item.id}
             >
               <Link to={item.path}>{item.name}</Link>
