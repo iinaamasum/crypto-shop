@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaHamburger } from 'react-icons/fa';
+import { RiCloseLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -18,11 +19,18 @@ const Header = () => {
           Crypto Shop
         </div>
         {/* FaHamburger */}
-        <div className="text-2xl absolute right-8 top-5 cursor-pointer md:hidden">
-          <FaHamburger />
+        <div
+          onClick={() => setOpen(!open)}
+          className="text-2xl absolute right-8 top-5 cursor-pointer md:hidden"
+        >
+          {open ? <RiCloseLine /> : <FaHamburger />}
         </div>
         {/* links */}
-        <ul className="text-xl sm:text-2xl md:flex md:items-center absolute md:static bg-white z-[-1] md:z-auto left-0 w-full md:w-auto pl-12 md:pl-0 transition-all duration-500 ease-in-out">
+        <ul
+          className={`text-xl md:flex md:items-center absolute md:static bg-white z-[-1] md:z-auto left-0 w-full md:w-auto pl-12 md:pl-0 transition-all duration-500 ease-in-out ${
+            open ? 'top-17 opacity-95' : 'top-[-900px] md:opacity-100 opacity-0'
+          }`}
+        >
           {navItems.map((item) => (
             <li className="md:ml-8 my-7 md:my-0 text-gray-900 hover:text-gray-400 transition-all duration-200 uppercase font-semibold">
               <Link to={item.path} key={item.id}>
